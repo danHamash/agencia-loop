@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  touch-action: pan-y;
 }
 
 
@@ -11,15 +12,22 @@ header{
 
 }
 nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: #444444;
 }
+.logo{
+    margin-left: 5rem;
+}
+.logo img{
+    width: 12.5rem;
+}
 .btn_hamburguer{
-    position: absolute;
-    right: 20px;
-    top: 20px;
     z-index: 99;
+    margin-right: 3rem;
 }
 .btn_hamburguer button{
     background: transparent;
@@ -28,11 +36,10 @@ nav{
     border: none;
     border-radius: 9px;
     rotate: 90deg;
-    
     color: #fff;
 }
 .btn_hamburguer:hover button{
-color: #000;
+color: #ffffff;
 font-weight: bold;
 cursor: pointer;
 }
@@ -50,7 +57,7 @@ cursor: pointer;
 
 /* Quando mostrar, só muda o right */
 .menu-hamburguer.show {
-  right: 0;
+  right: 0px;
 }
 
 
@@ -69,4 +76,29 @@ li{
     text-decoration: none;
     list-style: none;
     padding: .5rem 0 .5rem 0 ;
+}
+@media (max-width:720px) {
+    
+    nav{
+        height: 80px;
+    }
+    .menu-hamburguer{
+        width: 100%;
+        height: 130px;
+        border-radius: 0;
+        background: #222222e6;
+        
+    }
+    .btn_hamburguer{
+    margin-right: 1rem;
+    }
+    ul{
+        margin-top: 1rem;
+    }
+    .logo{
+        margin-left: 1rem;
+    }
+    .logo img{
+        width: 5rem;
+    }
 }
